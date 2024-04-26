@@ -1,0 +1,158 @@
+.sidebar {
+    float: left;
+    margin-right: 20px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+}
+
+.sidebar nav ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px; 
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.centrage{
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%; 
+    background-color:rgb(255, 255, 255) ; 
+    padding: 10px 0; 
+    text-align: center; 
+}
+
+.hideit {
+    display: none;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s, transform 0.3s;
+    position: absolute; /* Position absolue pour sortir de la vue */
+    top: 100%; /* Déplacer la liste sous le header */
+}
+
+#menu-icon:checked + ul#menu-links {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative; /* Retourner à la position relative */
+    top: 0; /* Réinitialiser la position */
+}
+
+
+.header{
+    background-color: beige;
+    position: relative;
+    height: 115px;
+}
+
+.footer{
+    background-color: beige;
+    bottom: 0;
+    width: 100%;
+}
+
+.header img {
+    position: absolute; /* Position absolue par rapport à son conteneur parent */
+    top: 0; /* Position en haut */
+    left: 0; /* Position à gauche */
+    width: 40px; /* Largeur de l'image */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+}
+
+
+.menu-item {
+    border: 1px solid #ccc; /* Définit une bordure grise de 1 pixel autour de chaque div */
+    border-radius: 5px; 
+    margin-bottom: 10px; /* Ajoute un espace en bas de chaque div */
+    padding: 10px; /* Ajoute un espace à l'intérieur de chaque div */
+    width: 90px;
+}
+
+.item-info {
+    border: 1px solid #ccc; /* Définit une bordure grise de 1 pixel autour de chaque div */
+    border-radius: 5px; 
+    margin-bottom: 10px; /* Ajoute un espace en bas de chaque div */
+
+}
+
+.item-image {
+    border: 1px solid #ccc; /* Définit une bordure grise de 1 pixel autour de chaque div */
+    border-radius: 5px; 
+    margin-bottom: 10px; /* Ajoute un espace en bas de chaque div */
+    padding: 10px; /* Ajoute un espace à l'intérieur de chaque div */
+}
+
+.item-image img {
+    max-width: 100%; /* Définit la largeur maximale de l'image à 100% de la largeur de son conteneur */
+    height: auto; /* Permet à la hauteur de l'image de s'ajuster automatiquement pour maintenir les proportions */
+}
+
+.price {
+    border: 1px solid #ccc; /* Définit une bordure grise de 1 pixel autour de chaque div */
+}
+
+
+
+
+
+
+@keyframes swipe {
+    0% { transform: translateX(0); }
+    33.3% { transform: translateX(-100%); }
+    66.6% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+.carousel-image {
+    animation: swipe 6s infinite;
+
+}
+
+.image-container {
+    width: 90px; /* Largeur totale des 3 images */
+    height: auto; /* Hauteur de la case */
+    overflow: hidden; /* Cache les images qui dépassent de la case */
+    border: 1px solid #ccc; /* Bordure de la case */
+    position: relative; /* Position relative pour les images */
+    display: flex;
+    flex-direction: row;
+}
+
+.image-container img {
+    width: 90px; /* Largeur de chaque image */
+    height: auto; /* Hauteur de chaque image */
+    float: left; /* Pour aligner les images côte à côte */
+}
+
+
+
+
+
+
+.add-to-cart-btn {
+    background-color: #4CAF50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Remplissage intérieur */
+    font-size: 16px; /* Taille de la police */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur de souris au survol */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #45a049; /* Couleur de fond au survol */
+}
