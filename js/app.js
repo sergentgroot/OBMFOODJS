@@ -15,32 +15,34 @@ closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 })
 
-    const addDataToHTML = () => {
+// Fonction pour ajouter les produits à la liste en fonction de la catégorie sélectionnée
+const addDataToHTML = (category) => {
     // remove datas default from HTML
+    listProductHTML.innerHTML = '';
 
-        // add new datas
-        if(products.length > 0) // if has data
-        {
-            products.forEach(product => {
-                let newProduct = document.createElement('div');
-                newProduct.dataset.id = product.id;
-                newProduct.classList.add('item');
-                newProduct.innerHTML = 
-                `<img src="${product.image}" alt="">
-                <h2>${product.name}</h2>
-                <div class="price">${product.price}</div>
-                <button class="addCart">Add To Cart</button>`;
-                listProductHTML.appendChild(newProduct);
-            });
-        }
+    // add new datas
+    if(products[category] && products[category].length > 0) {
+        products[category].forEach(product => {
+            let newProduct = document.createElement('div');
+            newProduct.dataset.id = product.id;
+            newProduct.classList.add('item');
+            newProduct.innerHTML = 
+            `<img src="${product.image}" alt="">
+            <h2>${product.name}</h2>
+            <div class="price">${product.price}</div>
+            <button class="addCart">Add To Cart</button>`;
+            listProductHTML.appendChild(newProduct);
+        });
     }
-    listProductHTML.addEventListener('click', (event) => {
-        let positionClick = event.target;
-        if(positionClick.classList.contains('addCart')){
-            let id_product = positionClick.parentElement.dataset.id;
-            addToCart(id_product);
-        }
-    })
+}
+
+// Écouteur d'événements pour les boutons de catégorie
+document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const category = btn.dataset.category;
+        addDataToHTML(category);
+    });
+});
 const addToCart = (product_id) => {
     let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
     if(cart.length <= 0){
