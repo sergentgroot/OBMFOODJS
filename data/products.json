@@ -1,21 +1,64 @@
-[
-    {
-        "id": 1,
-        "name":" LD01 LOUNGE CHAIR",
-        "price": 200,
-        "image": "image/page_selection_img/b1.png"
-    },
-    {
-        "id": 2,
-        "name":" LD02 LOUNGE CHAIR",
-        "price": 250,
-        "image": "image/page_selection_img/b2.png"
-    },
-    {
-        "id": 3,
-        "name":" LD03 LOUNGE CHAIR",
-        "price": 290,
-        "image": "image/page_selection_img/b3.png"
-    }
-
-]
+{
+    "burgers": [
+        {
+            "id": 1,
+            "name": "burger1",
+            "price": 200,
+            "image": "image/page_selection_img/image_test.png"
+        },
+        {
+            "id": 2,
+            "name": "burger2",
+            "price": 250,
+            "image": "image/page_selection_img/image_test.png"
+        },
+        {
+            "id": 3,
+            "name": "burger3",
+            "price": 290,
+            "image": "image/page_selection_img/image_test.png"
+        }
+    ],
+    "boissons": [
+        {
+            "id": 4,
+            "name": "boisson1",
+            "price": 51,
+            "image": "image/page_selection_img/image_test.png"
+        },
+        {
+            "id": 5,
+            "name": "boisson2",
+            "price": 50,
+            "image": "image/page_selection_img/image_test.png"
+        }
+    ],
+    "desserts": [
+        {
+            "id": 4,
+            "name": "dessert1",
+            "price": 15,
+            "image": "image/page_selection_img/image_test.png"
+        },
+        {
+            "id": 5,
+            "name": "dessert2",
+            "price": 14,
+            "image": "image/page_selection_img/image_test.png"
+        }
+    ],
+    "menus": [
+        {
+            "id": 4,
+            "name": "menu1",
+            "price": 99,
+            "image": "image/page_selection_img/image_test.png"
+        },
+        {
+            "id": 5,
+            "name": "menu2",
+            "price": 99,
+            "image": "image/page_selection_img/image_test.png"
+        }
+    ]
+}
